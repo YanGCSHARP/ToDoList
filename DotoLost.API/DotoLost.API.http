@@ -1,0 +1,6 @@
+@DotoLost.API_HostAddress = http://localhost:5083
+
+GET {{DotoLost.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

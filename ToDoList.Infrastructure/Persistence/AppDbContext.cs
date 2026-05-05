@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using ToDoWW.Domain.Entities;
+using ToDoList.Domain.Entities;
 
-namespace ToDoWW.Infrastructure.Persistence;
+namespace ToDoList.Infrastructure.Persistence;
 
 public class AppDbContext : DbContext{
     
@@ -10,9 +10,10 @@ public class AppDbContext : DbContext{
         
     }
     
-    public DbSet<Room> => Set<Room>();
-    public DbSet<TodoItem> => Set<TodoItem>();
-    public DbSet<UserRoom> => Set<UserRoom>();
+    public DbSet<Room> Rooms => Set<Room>();
+    public DbSet<TodoItem> TodoItems => Set<TodoItem>();
+    public DbSet<UserRoom> UserRooms => Set<UserRoom>();
+    public DbSet<User> Users => Set<User>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

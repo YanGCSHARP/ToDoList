@@ -24,9 +24,4 @@
       <ProjectReference Include="..\ToDoList.Infrastructure\ToDoList.Infrastructure.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Features\ToDoItems\Queries\GetAllToDoItem\" />
-      <Folder Include="Features\ToDoItems\Queries\GetToDoItemById\" />
-    </ItemGroup>
-
 </Project>

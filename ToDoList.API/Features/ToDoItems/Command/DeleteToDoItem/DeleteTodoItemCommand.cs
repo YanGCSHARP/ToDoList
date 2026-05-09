@@ -1,6 +1,8 @@
+using MediatR;
+
 namespace ToDoList.API.Features.ToDoItems.Command.DeleteToDoItem;
 
-public class DeleteTodoItemCommand
-{
-    
-}
+public record DeleteTodoItemCommand
+(
+    Guid Id
+) : IRequest<bool>;

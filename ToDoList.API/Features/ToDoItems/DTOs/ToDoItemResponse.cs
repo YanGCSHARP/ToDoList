@@ -6,7 +6,7 @@ public record ToDoItemResponse
 (
     Guid Id,
     string Title,
-    string Description,
+    string? Description,
     bool IsCompleted,
     DateTime CreatedAt,
     DateTime? DueDate,

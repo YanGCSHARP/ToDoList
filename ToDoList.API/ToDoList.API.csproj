@@ -8,6 +8,9 @@
   </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="FluentValidation" Version="12.1.1" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
+        <PackageReference Include="MediatR" Version="14.1.0" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.4">
           <PrivateAssets>all</PrivateAssets>
@@ -19,6 +22,11 @@
     <ItemGroup>
       <ProjectReference Include="..\ToDoList.Domain\ToDoList.Domain.csproj" />
       <ProjectReference Include="..\ToDoList.Infrastructure\ToDoList.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Features\ToDoItems\Queries\GetAllToDoItem\" />
+      <Folder Include="Features\ToDoItems\Queries\GetToDoItemById\" />
     </ItemGroup>
 
 </Project>

@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotoLost.API", "DotoLost.API\DotoLost.API.csproj", "{FB82D880-5E35-4354-B984-B1856FAE833D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList.API", "ToDoList.API\ToDoList.API.csproj", "{FB82D880-5E35-4354-B984-B1856FAE833D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoWW.Domain", "ToDoWW.Domain\ToDoWW.Domain.csproj", "{6510D4E0-4D89-426A-9C6E-BADB288AC576}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList.Domain", "ToDoList.Domain\ToDoList.Domain.csproj", "{6510D4E0-4D89-426A-9C6E-BADB288AC576}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoWW.Infrastructure", "ToDoWW.Infrastructure\ToDoWW.Infrastructure.csproj", "{0925C34D-CD44-45EF-A379-58A32283F1C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList.Infrastructure", "ToDoList.Infrastructure\ToDoList.Infrastructure.csproj", "{0925C34D-CD44-45EF-A379-58A32283F1C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,7 +5,7 @@ using ToDoList.Infrastructure.Persistence;
 
 namespace ToDoList.API.Features.ToDoItems.Command.UpdateToDoItem;
 
-public class UpdateTodoItemHandler : IRequestHandler<UpdateTodoItemCommand, ToDoItemResponse>
+public class UpdateTodoItemHandler : IRequestHandler<UpdateTodoItemCommand, ToDoItemResponse?>
 {
     private readonly AppDbContext _db;
     

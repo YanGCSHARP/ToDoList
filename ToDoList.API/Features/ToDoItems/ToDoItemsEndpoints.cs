@@ -5,6 +5,7 @@ using ToDoList.API.Features.ToDoItems.Command.UpdateToDoItem;
 using ToDoList.API.Features.ToDoItems.DTOs;
 using ToDoList.API.Features.TodoItems.Queries.GetAllTodoItems;
 using ToDoList.API.Features.TodoItems.Queries.GetTodoItemById;
+using ToDoList.Infrastructure.Persistence;
 
 namespace ToDoList.API.Features.ToDoItems;
 
@@ -13,6 +14,8 @@ public static class ToDoItemsEndpoints
     public static void MapToDoItemEndpoints(this WebApplication app)
     {
         var group = app.MapGroup("/api/todoitems").WithTags("ToDoItems");
+        
+        
         
         group.MapGet("/room/{roomId:guid}", async (Guid roomId, IMediator mediator) =>
         {
@@ -53,5 +56,7 @@ public static class ToDoItemsEndpoints
             var result = await mediator.Send(new DeleteTodoItemCommand(id));
             return result ? Results.NoContent() : Results.NotFound();
         });
+        
+        
     }
 }

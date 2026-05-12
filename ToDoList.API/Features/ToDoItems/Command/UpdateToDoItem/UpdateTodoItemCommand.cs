@@ -9,4 +9,4 @@ public record UpdateTodoItemCommand
     string Description,
     bool IsCompleted,
     DateTime? DueDate
-) : IRequest<ToDoItemResponse>;
+) : IRequest<ToDoItemResponse?>;

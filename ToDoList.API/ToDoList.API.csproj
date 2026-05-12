@@ -24,4 +24,9 @@
       <ProjectReference Include="..\ToDoList.Infrastructure\ToDoList.Infrastructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Features\Rooms\Command\" />
+      <Folder Include="Features\Rooms\Queries\" />
+    </ItemGroup>
+
 </Project>

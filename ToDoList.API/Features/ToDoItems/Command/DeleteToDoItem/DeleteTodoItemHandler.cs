@@ -15,7 +15,8 @@ public class DeleteTodoItemHandler : IRequestHandler<DeleteTodoItemCommand, bool
 
     public async Task<bool> Handle(DeleteTodoItemCommand request, CancellationToken cancellationToken)
     {
-        var item = _db.TodoItems.FirstOrDefaultAsync(t => t.Id == request.Id, cancellationToken).Result;
+        var item = await _db.TodoItems
+            .FirstOrDefaultAsync(t => t.Id == request.Id, cancellationToken);
         
         if (item is null) return false;
         

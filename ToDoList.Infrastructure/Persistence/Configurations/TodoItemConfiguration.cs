@@ -21,7 +21,7 @@ public class TodoItemConfiguration : IEntityTypeConfiguration<TodoItem>
             .HasDefaultValue(false);
         
         builder.Property(t => t.CreatedAt)
-            .HasDefaultValueSql("NOW()");
+            .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
 
     }

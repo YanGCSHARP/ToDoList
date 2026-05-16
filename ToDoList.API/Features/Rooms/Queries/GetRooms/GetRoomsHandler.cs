@@ -6,7 +6,7 @@ using ToDoList.Infrastructure.Persistence;
 
 namespace ToDoList.API.Features.Rooms.Queries.GetRooms;
 
-public class GetRoomsHandler : IRequestHandler<GetRoomsQuery, List<CreateRoomResponse>>
+public class GetRoomsHandler : IRequestHandler<GetRoomsQuery, List<RoomResponse>>
 {
     private readonly AppDbContext _db;
     
@@ -15,10 +15,10 @@ public class GetRoomsHandler : IRequestHandler<GetRoomsQuery, List<CreateRoomRes
         _db = db;
     }
 
-    public async Task<List<CreateRoomResponse>> Handle(GetRoomsQuery request, CancellationToken cancellationToken)
+    public async Task<List<RoomResponse>> Handle(GetRoomsQuery request, CancellationToken cancellationToken)
     {
         return await _db.Rooms
-            .Select(r => new CreateRoomResponse(r.Id, r.Name, r.Code, r.CreatedAt))
+            .Select(r => new RoomResponse(r.Id, r.Name, r.Code, r.CreatedAt))
             .ToListAsync(cancellationToken);
         
         

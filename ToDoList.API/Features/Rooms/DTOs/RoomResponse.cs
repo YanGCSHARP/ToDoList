@@ -1,6 +1,6 @@
 namespace ToDoList.API.Features.Rooms.DTOs;
 
-public record CreateRoomResponse(
+public record RoomResponse(
     Guid Id,
     string Name,
     string Code,

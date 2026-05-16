@@ -11,8 +11,9 @@ public class UpdateTodoItemValidator : AbstractValidator<UpdateTodoItemCommand>
             .MaximumLength(100);
 
         RuleFor(x => x.Description)
-            .MaximumLength(500)
-            .When(x => x.Description is not null);
+            .NotEmpty()
+            .MaximumLength(500).WithMessage("Description must not exceed 500 characters.");
+            
 
         RuleFor(x => x.DueDate)
             .Must(d => d == null || d.Value >= DateTime.UtcNow.Date)

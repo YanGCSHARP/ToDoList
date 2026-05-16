@@ -6,7 +6,7 @@ using ToDoList.Infrastructure.Persistence;
 
 namespace ToDoList.API.Features.Rooms.Command.CreateRoom;
 
-public class CreateRoomHandler : IRequestHandler<CreateRoomCommand, CreateRoomResponse>
+public class CreateRoomHandler : IRequestHandler<CreateRoomCommand, RoomResponse>
 {
     private readonly AppDbContext _db;
     
@@ -15,7 +15,7 @@ public class CreateRoomHandler : IRequestHandler<CreateRoomCommand, CreateRoomRe
         _db = db;
     }
 
-    public async Task<CreateRoomResponse> Handle(CreateRoomCommand request, CancellationToken cancellationToken)
+    public async Task<RoomResponse> Handle(CreateRoomCommand request, CancellationToken cancellationToken)
     {
         var room = new Room
         {
@@ -26,7 +26,7 @@ public class CreateRoomHandler : IRequestHandler<CreateRoomCommand, CreateRoomRe
         _db.Rooms.Add(room);
         await _db.SaveChangesAsync(cancellationToken);
         
-        return new CreateRoomResponse(room.Id, room.Name, room.Code, room.CreatedAt);
+        return new RoomResponse(room.Id, room.Name, room.Code, room.CreatedAt);
 
     }
 }
